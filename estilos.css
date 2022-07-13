@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+body{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-family: Poppins;
+  background-color: rgba(245, 245, 245);
+}
+.flechas{
+  opacity: 0.5;
+}
+.contenedor{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.face1{
+  width: 300px;
+  height: 400px;
+  transform-origin: right;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.img1{
+  box-shadow: 1px 1px 19px 1px rgba(0,0,0,0.6);
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  backface-visibility: hidden;
+  background-image: url("https://img.freepik.com/foto-gratis/sonriente-joven-mujer-escuela-mochila-gafas_141793-121402.jpg?w=740&t=st=1657703048~exp=1657703648~hmac=62da738326a6784684ed0254cd750d42cb99e21d410d376239ddc3f6af39e4f9");
+  background-size: cover;
+  background-position: left;
+}
+.img2{
+  box-shadow: -6px 1px 19px -4px rgba(0,0,0,0.6);
+  width: 300px;
+  height: 400px;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background-image: url("https://img.freepik.com/foto-gratis/estudiante-libros-papeleria_1258-48204.jpg?w=740&t=st=1657703070~exp=1657703670~hmac=ff86867b5b1c17d20d59670e051f5104fe5365a0c78a562a35daa146cf29a8d7");
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  margin-top: -20px;
+}
+h3{
+  margin-top: -15px;
+}
+.face2{
+  box-shadow: 1px 1px 19px 1px rgba(0,0,0,0.6);
+  width: 300px;
+  height: 400px;
+  background-color: rgb(236, 149, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.icons{
+  width: 200px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+.icons div{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg:hover{
+  opacity: 0.8;
+}
+.animation1{
+  animation: 1s open ease-in-out forwards;
+}
+.animation2{
+  animation: 1s open ease-in-out reverse forwards;
+}
+.mover1{
+  animation: 1s mover ease-in-out forwards;
+}
+.mover2{
+  animation: 1s mover ease-in-out reverse forwards;
+}
+@keyframes open {
+  from{
+    transform-origin: right;
+    transform: rotateY(0deg);
+  }
+  to{
+    transform-origin: right;
+    transform: rotateY(180deg);
+
+  }
+}
+@keyframes mover {
+  from{
+    transform: translateX(0px);
+  }
+  to{
+    transform: translateX(-200px);
+  }
+}
